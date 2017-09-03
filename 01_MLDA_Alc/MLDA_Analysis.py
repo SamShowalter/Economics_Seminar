@@ -88,25 +88,16 @@ def reformat_data(data):
 #Generate Summary Data 
 data = reformat_data(raw_data)
 
+
+#Creates descriptive statistics summary tables
 under21data = data[data.Under21 == 1]
 over21data = data[data.Under21 == 0]
 
+#Formats summary table data so it is aesthetically pleasing
 under21summary = under21data.describe().T
 over21summary = over21data.describe().T
 
-import matplotlib.pyplot as plt
-import pandas as pd
-from pandas.tools.plotting import table
-
-ax = plt.subplot(111, frame_on=False) # no visible frame
-ax.xaxis.set_visible(False)  # hide the x axis
-ax.yaxis.set_visible(False)  # hide the y axis
-
-under21 = table(ax, under21summary)  # where df is your data frame
-
-plt.savefig('under21desc.png')
-
-
+#Prints all data to console
 print(under21summary)
 print()
 print(over21summary)
