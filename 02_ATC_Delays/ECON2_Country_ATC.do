@@ -23,7 +23,7 @@ eststo: regress flt_arr_1_dly_15 private flt_arr_1 ///
 		france germany netherlands unitedkingdom /// 
 		jan feb mar apr may jun jul sep oct nov dec, robust
 					 
-* Number of minutes of delay on average per flight
+* Number of minutes of delay on average per day
 eststo: regress dly_apt_1 private flt_arr_1 ///
 		france germany netherlands unitedkingdom /// 
 		jan feb mar apr may jun jul sep oct nov dec, robust

@@ -14,7 +14,7 @@ def reformat_data(data):
 
 	# Add new field to identify if country uses PPP (more Private) or a government corporation
 	data["Private"] = data.STATE_NAME
-	data.replace({"Private:":{'France': 0, 'Germany': 0, 'Netherlands': 1,"Switzerland": 1, "Sweden": 0,"United Kingdom": 1}}, regex = True, inplace = True)
+	data.replace({"Private:":{'France': 0, 'Germany': 0, 'Netherlands': 0,"Switzerland": 1, "Sweden": 0,"United Kingdom": 1}}, regex = True, inplace = True)
 
 
 	# Change code for months to dummy variables
